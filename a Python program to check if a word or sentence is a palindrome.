@@ -1,0 +1,10 @@
+#checking if word or sentence is palindrome or not
+def is_palindrome(sentence):
+    cleaned_sentence = ''.join(sentence.split()).lower()
+    return cleaned_sentence == cleaned_sentence[::-1]  
+
+sentence = str(input("Enter a sentence: "))
+if is_palindrome(sentence):
+    print("The sentence is a palindrome.")
+else:
+    print("The sentence is not a palindrome.") 
