@@ -1,0 +1,19 @@
+#removing stopwords from a paragraph
+# This script defines a function to remove common English stopwords from a given string.
+paragraph = str(input("Enter a paragraph: "))
+
+def remove_stopwords(text):
+    # Define a set of common English stopwords
+    stopwords = {'is', 'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by', 'as', 'it', 'that', 'this', 'be', 'are', 'was', 'were', 'been', 'have', 'has', 'had', 'do', 'does', 'did', 'will', 'would', 'could', 'should', 'may', 'might', 'must', 'can'}
+    
+    words = text.split()
+    filtered_words = []
+    
+    for word in words:
+        clean_word = ''.join(char for char in word if char.isalnum()).lower()
+        if clean_word and clean_word not in stopwords:
+            filtered_words.append(word)
+    
+    return ' '.join(filtered_words)
+
+
