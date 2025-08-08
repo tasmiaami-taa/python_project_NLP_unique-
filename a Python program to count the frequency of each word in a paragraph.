@@ -1,0 +1,19 @@
+from collections import Counter
+import re
+
+def word_frequency(paragraph):
+    # Using regular expression to extract all words (case-insensitive)
+    words = re.findall(r'\b\w+\b', paragraph.lower())
+    # Return a dictionary-like Counter object
+    return Counter(words)
+
+# Asking user to input a large paragraph
+paragraph = input("Enter your paragraph (can be very large): ")
+
+# Calculing word frequencies
+frequency = word_frequency(paragraph)
+
+# Displaying results
+print("Word frequency in the paragraph is:")
+for word, count in frequency.items():
+    print(f"{word}: {count}")
