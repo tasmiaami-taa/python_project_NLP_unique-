@@ -1,0 +1,17 @@
+#count vowels and consonants in a sentence
+sentence = str(input("Write a sentence: "))  # this will be the sentence we will
+def count_vowels_consonants(sentence):
+    vowels = "aeiouAEIOU"
+    consonants = 0
+    vowel_count = 0
+
+    for char in sentence:
+        if char.isalpha():  
+            if char in vowels:
+                vowel_count += 1
+            else:
+                consonants += 1
+
+    return vowel_count, consonants
+
+print("Total number of vowels and consonants in the sentence is:", count_vowels_consonants(sentence))  # this will print the total number of vowels and consonants in the sentence
