@@ -1,0 +1,11 @@
+def replace_word(sentence, target, replacement):
+    words = sentence.split()
+    modified = [replacement if word == target else word for word in words]
+    return ' '.join(modified)
+
+sentence = input("Enter a sentence: ")
+target = input("Enter the target word: ")
+replacement = input("Enter the replacement word: ")
+
+result = replace_word(sentence, target, replacement)
+print("Modified sentence:", result)
