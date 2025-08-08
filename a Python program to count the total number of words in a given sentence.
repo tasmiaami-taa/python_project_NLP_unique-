@@ -1,0 +1,9 @@
+#coouting total number of words in a sentencs:
+
+sentence =str(input("Write a sentence:"))  #this will be the sentence we will count words in
+def count_words(sentence):       #this function will take a string=sentence
+     words = sentence.split() #the split()function splits the sentence into a list.
+     return len(words) #as we have to count ,len will count the splited words
+
+
+print("Total number of words in the sentence is:", count_words(sentence))  #this will print the total number of words in the sentence
