@@ -1,0 +1,7 @@
+def title_case(sentence):
+    return sentence.title()
+
+sentence = input("Enter your sentence: ")
+result = title_case(sentence)
+print("Title case format:", result)
+
