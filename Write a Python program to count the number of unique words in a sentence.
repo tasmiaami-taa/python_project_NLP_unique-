@@ -1,0 +1,16 @@
+#counting number of unique words in a sentence:
+def count_unique_words(sentence):   
+    words = sentence.lower().split()
+    cleaned_words = []
+    for word in words:
+        cleaned_word = ''.join(char for char in word if char.isalnum())
+        if cleaned_word:
+            cleaned_words.append(cleaned_word)
+    
+    unique_words = set(cleaned_words)
+    return len(unique_words)
+sentence = str(input("Write a sentence: ")) 
+print("Total number of unique words in the sentence is:", count_unique_words(sentence))  
+test_sentence = "The quick brown fox jumps over the lazy dog the fox"
+print(f"Unique word count in test sentence: {count_unique_words(test_sentence)}")  
+                                                          
