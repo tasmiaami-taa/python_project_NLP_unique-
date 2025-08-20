@@ -1,0 +1,18 @@
+def tuple_operations(tuple1, tuple2):
+    # Ensure tuples have the same length
+    if len(tuple1) != len(tuple2):
+        return "Tuples must have the same length"
+    
+    addition = tuple(a + b for a, b in zip(tuple1, tuple2))
+    subtraction = tuple(a - b for a, b in zip(tuple1, tuple2))
+    multiplication = tuple(a * b for a, b in zip(tuple1, tuple2))
+    
+    return addition, subtraction, multiplication
+
+# Test the function
+tuple1 = (1, 2, 3)
+tuple2 = (4, 5, 6)
+add, sub, mult = tuple_operations(tuple1, tuple2)
+print(f"{tuple1} + {tuple2} = {add}")
+print(f"{tuple1} - {tuple2} = {sub}")
+print(f"{tuple1} * {tuple2} = {mult}")
