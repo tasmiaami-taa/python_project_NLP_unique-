@@ -1,0 +1,11 @@
+def find_common_elements(list1, list2):
+    return [element for element in list1 if element in list2]
+
+# Test the function
+list1 = [1, 2, 3, 4, 5]
+list2 = [4, 5, 6, 7, 8]
+common = find_common_elements(list1, list2)
+print("Common elements:", common)
+
+output:
+Common elements: [4, 5]
