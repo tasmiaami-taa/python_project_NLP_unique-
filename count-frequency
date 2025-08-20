@@ -1,0 +1,12 @@
+def count_frequency(tup, element):
+    count = 0
+    for item in tup:
+        if item == element:
+            count += 1
+    return count
+
+# Test the function
+sample_tuple = (1, 2, 3, 2, 4, 2, 5)
+element = 2
+frequency = count_frequency(sample_tuple, element)
+print(f"Frequency of {element} in {sample_tuple}: {frequency}")
