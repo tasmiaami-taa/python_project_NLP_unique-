@@ -1,0 +1,8 @@
+def check_element_in_tuple(tup, element):
+    return element in tup
+
+# Test the function
+sample_tuple = (10, 20, 30, 40, 50)
+element = 30
+exists = check_element_in_tuple(sample_tuple, element)
+print(f"Is {element} in {sample_tuple}? {exists}")
