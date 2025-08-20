@@ -1,0 +1,9 @@
+def is_palindrome(s):
+    s = ''.join(char.lower() for char in s if char.isalnum())
+    return s == s[::-1]
+
+
+print("Is 'radar' a palindrome?", is_palindrome("radar"))
+print("Is 'Python' a palindrome?", is_palindrome("Python"))
+print("Is 'A man, a plan, a canal, Panama' a palindrome?", 
+      is_palindrome("A man, a plan, a canal, Panama"))
