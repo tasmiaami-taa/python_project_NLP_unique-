@@ -1,0 +1,32 @@
+def math_operations(num1, num2, num3, operation):
+    def add():
+        return num1 + num2 + num3
+    
+    def subtract():
+        return num1 - num2 - num3
+    
+    def multiply():
+        return num1 * num2 * num3
+    
+    def divide():
+        if num2 == 0 or num3 == 0:
+            return "Error: Division by zero"
+        return num1 / num2 / num3
+    
+    operations = {
+        'add': add,
+        'subtract': subtract,
+        'multiply': multiply,
+        'divide': divide
+    }
+    
+    if operation.lower() in operations:
+        return operations[operation.lower()]()
+    else:
+        return "Invalid operation"
+
+# Test the function
+print("Add (2, 3, 4):", math_operations(2, 3, 4, 'add'))
+print("Subtract (10, 3, 2):", math_operations(10, 3, 2, 'subtract'))
+print("Multiply (2, 3, 4):", math_operations(2, 3, 4, 'multiply'))
+print("Divide (20, 2, 2):", math_operations(20, 2, 2, 'divide'))
