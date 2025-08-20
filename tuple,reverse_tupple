@@ -1,0 +1,22 @@
+# tuple
+def sort_tuple(tup):
+    return tuple(sorted(tup))
+
+# Reverse a tuple 
+def reverse_tuple(tup):
+    reversed_list = []
+    for i in range(len(tup)-1, -1, -1):
+        reversed_list.append(tup[i])
+    return tuple(reversed_list)
+
+# Test the functions
+numbers = (5, 2, 8, 1, 9)
+sorted_tup = sort_tuple(numbers)
+reversed_tup = reverse_tuple(numbers)
+print("Original:", numbers)
+print("Sorted:", sorted_tup)
+print("Reversed:", reversed_tup)
+
+output:
+Nested list: [[1, 2, [3, 4]], [5, 6], 7, [8, [9, 10]]]
+Flat list: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
