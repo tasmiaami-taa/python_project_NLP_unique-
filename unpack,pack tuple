@@ -1,0 +1,17 @@
+# Part a: Unpack a tuple
+def unpack_tuple(tup):
+    x, y, z = tup
+    return x, y, z
+
+# Part b: Pack variables into a tuple
+def pack_to_tuple(x, y, z):
+    return (x, y, z)
+
+# Test the functions
+original_tuple = (10, 20, 30)
+a, b, c = unpack_tuple(original_tuple)
+print(f"Unpacked: a={a}, b={b}, c={c}")
+
+new_tuple = pack_to_tuple(a, b, c)
+print("Packed tuple:", new_tuple)
+
