@@ -1,0 +1,8 @@
+def gcd(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a
+
+print("GCD of 48 and 18:", gcd(48, 18))
+print("GCD of 60 and 48:", gcd(60, 48))
+print("GCD of 17 and 13:", gcd(17, 13))
