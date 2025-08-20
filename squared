@@ -1,0 +1,12 @@
+def square_elements(numbers):
+    return [num**2 for num in numbers]
+
+# Test the function
+numbers = [1, 2, 3, 4, 5]
+squared = square_elements(numbers)
+print("Original:", numbers)
+print("Squared:", squared)
+
+output:
+Original: [1, 2, 3, 4, 5]
+Squared: [1, 4, 9, 16, 25] 
